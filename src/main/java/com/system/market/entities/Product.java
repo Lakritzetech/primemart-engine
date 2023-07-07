@@ -14,7 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode (of = "id")
-@Table (name = "PT_POST")
+@Table (name = "products")
 public class Product {
     @Id
     @GeneratedValue (strategy =  GenerationType.IDENTITY)
