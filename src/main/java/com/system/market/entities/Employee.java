@@ -12,7 +12,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode (of = "id")
-@Table (name = "EP_POSt")
+@Table (name = "employees")
 public class Employee {
     @Id
     @GeneratedValue (strategy =  GenerationType.IDENTITY)
