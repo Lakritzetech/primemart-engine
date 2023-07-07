@@ -11,7 +11,7 @@
 	<groupId>.com.system</groupId>
 	<artifactId>market</artifactId>
 	<version>0.0.1</version>
-	<name>market</name>
+	<name>PrimeMart</name>
 	<description>Sistema market</description>
 	<properties>
 		<java.version>17</java.version>

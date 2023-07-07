@@ -40,9 +40,12 @@ public class EmployeeController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
     public void save(@RequestBody EmployeeRequestDTO data) {
+        if (employeeRepository.existsByCpf(data.getCpf())) {
+            throw new RuntimeException("Já existe um cadastro com esse CPF.");
+        }
         Employee employeeData = new Employee(data);
         employeeRepository.save(employeeData);
-         
+
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
