@@ -21,6 +21,8 @@ public class Employee {
     private String name;
     @NotBlank
     private String email;
+
+
     @NotNull
     private Long cpf;
     @NotBlank
