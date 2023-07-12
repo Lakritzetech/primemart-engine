@@ -20,7 +20,7 @@ public class Address {
         private Long addressId;
         @NotBlank
         private String road;
-        @NotBlank
+        @NotNull
         private  Long number;
         @NotBlank
         private  String neighborhood;
