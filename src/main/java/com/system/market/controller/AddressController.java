@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("product")
+@RequestMapping("address")
 public class AddressController {
 
     @Autowired
@@ -25,44 +25,54 @@ public class AddressController {
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/id/{id}")
-    public Optional<Address> findById(@PathVariable Long addresId ) {
-        Optional<Address> getId = addressRepository.findById(addresId);
+    public Optional<Address> findById(@PathVariable Long id ) {
+        Optional<Address> getId = addressRepository.findById(id);
         return getId;
     }
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @DeleteMapping("/id/{id}")
-    public  ResponseEntity<Address>  deleteID(@PathVariable Long acdressId ) {
-        var address = addressRepository.findById(acdressId);
+    public  ResponseEntity<Address>  deleteID(@PathVariable Long id ) {
+        var address = addressRepository.findById(id);
         addressRepository.delete(address.get());
         return ResponseEntity.ok().body(address.get());
     }
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
-    public void save(@RequestBody Address data) {
+    public ResponseEntity<AddressResponseDTO> save(@RequestBody AddressResponseDTO data) {
         Address addressData = new Address(data);
         addressRepository.save(addressData);
+        return ResponseEntity.ok().body(data);
          
     }
     @CrossOrigin(origins = "*", allowedHeaders = "*")
-    @PatchMapping("/edit/{id}")
-    public ResponseEntity<Product> updateEmployee(@PathVariable Long id, @RequestBody ProductRequestDTO data) {
+    @PatchMapping("/id/{id}")
+    public ResponseEntity<Address> updateEmployee(@PathVariable Long id, @RequestBody AddressRequestDTO data) {
         Optional<Address> optionalAddress = addressRepository.findById(id);
 
         if (optionalAddress.isPresent()) {
             Address address = optionalAddress.get();
 
-            if (data.name() != null) {
-                address.setName(data.name());
+            if (data.road() != null) {
+                address.setRoad(data.road());
             }
-            if (data.preco()!= null) {
-                address.setPreco(data.preco());
+            if (data.number()!= null) {
+                address.setNumber(data.number());
             }
-            if (data.validade()!= null) {
-                address.setValidade(data.validade());
+            if (data.neighborhood()!= null) {
+                address.setNeighborhood(data.neighborhood());
             }
-            if (data.quantidade()!= null) {
-                address.setQuantidade(data.quantidade());
+            if (data.city()!= null) {
+                address.setCity(data.city());
+            }
+            if (data.city()!= null) {
+                address.setCity(data.city());
+            }
+            if (data.city()!= null) {
+                address.setCity(data.city());
+            }
+            if (data.cep()!= null) {
+                address.setCep(data.cep());
             }
 
             addressRepository.save(address);
