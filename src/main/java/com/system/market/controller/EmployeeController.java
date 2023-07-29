@@ -45,8 +45,6 @@ public class EmployeeController {
             throw new RuntimeException("Já existe um cadastro com esse CPF.");
         }
         Employee employeeData = new Employee(data);
-        Address address = new Address();
-        employeeData.setAddress(address);
         employeeRepository.save(employeeData);
 
     }

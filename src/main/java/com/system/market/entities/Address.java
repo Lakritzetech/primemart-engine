@@ -14,12 +14,12 @@ import java.util.Set;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = "addressId")
+@EqualsAndHashCode(of = "id")
 @Table(name = "address")
 public class Address {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long addressId;
+        private Long id;
 
         @NotBlank
         private String road;
