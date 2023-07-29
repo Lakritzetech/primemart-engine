@@ -1,5 +1,6 @@
 package com.system.market.controller;
 
+import com.system.market.entities.Address;
 import com.system.market.entities.Employee;
 import com.system.market.entities.EmployeeRequestDTO;
 import com.system.market.entities.EmployeeResponseDTO;
@@ -44,9 +45,13 @@ public class EmployeeController {
             throw new RuntimeException("Já existe um cadastro com esse CPF.");
         }
         Employee employeeData = new Employee(data);
+        Address address = new Address();
+        employeeData.setAddress(address);
         employeeRepository.save(employeeData);
 
     }
+
+
 
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PatchMapping("/edit/{id}")
