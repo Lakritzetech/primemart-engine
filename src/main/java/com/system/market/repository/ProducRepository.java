@@ -1,6 +1,6 @@
 package com.system.market.repository;
 
-import com.system.market.entities.Product;
+import com.system.market.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

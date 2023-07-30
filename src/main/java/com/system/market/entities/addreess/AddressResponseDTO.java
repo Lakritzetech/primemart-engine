@@ -1,4 +1,6 @@
-package com.system.market.entities;
+package com.system.market.entities.addreess;
+
+import com.system.market.model.Address;
 
 public record AddressResponseDTO(Long id, String road, Long number, String neighborhood, String city, String state, Long cep) {
     public AddressResponseDTO(Address address) {

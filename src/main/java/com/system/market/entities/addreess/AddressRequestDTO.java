@@ -1,4 +1,4 @@
-package com.system.market.entities;
+package com.system.market.entities.addreess;
 
 import java.util.Set;
 

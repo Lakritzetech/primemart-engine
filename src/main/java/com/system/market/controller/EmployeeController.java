@@ -1,9 +1,8 @@
 package com.system.market.controller;
 
-import com.system.market.entities.Address;
-import com.system.market.entities.Employee;
-import com.system.market.entities.EmployeeRequestDTO;
-import com.system.market.entities.EmployeeResponseDTO;
+import com.system.market.model.Employee;
+import com.system.market.entities.employee.EmployeeRequestDTO;
+import com.system.market.entities.employee.EmployeeResponseDTO;
 import com.system.market.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

@@ -1,5 +1,6 @@
-package com.system.market.entities;
+package com.system.market.model;
 
+import com.system.market.entities.product.ProductRequestDTO;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

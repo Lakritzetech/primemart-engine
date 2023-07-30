@@ -1,4 +1,4 @@
-package com.system.market.entities;
+package com.system.market.entities.employee;
 
 public record EmployeeRequestDTO(String name, String email, Long cpf, String shift, Long phone ) {
 

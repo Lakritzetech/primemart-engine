@@ -1,8 +1,9 @@
 package com.system.market.controller;
 
-import com.system.market.entities.*;
+import com.system.market.entities.addreess.AddressRequestDTO;
+import com.system.market.entities.addreess.AddressResponseDTO;
+import com.system.market.model.Address;
 import com.system.market.repository.AddressRepository;
-import com.system.market.repository.ProducRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

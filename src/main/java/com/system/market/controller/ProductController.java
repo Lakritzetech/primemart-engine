@@ -1,6 +1,8 @@
 package com.system.market.controller;
 
-import com.system.market.entities.*;
+import com.system.market.entities.product.ProductRequestDTO;
+import com.system.market.entities.product.ProductResponseDTO;
+import com.system.market.model.Product;
 import com.system.market.repository.ProducRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,6 @@
-package com.system.market.entities;
+package com.system.market.entities.product;
+
+import com.system.market.model.Product;
 
 import java.util.Date;
 

@@ -1,13 +1,10 @@
-package com.system.market.entities;
+package com.system.market.model;
 
+import com.system.market.entities.addreess.AddressResponseDTO;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
-
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 @Setter
 @Getter
@@ -41,7 +38,7 @@ public class Address {
 
         @ManyToOne
         @JoinColumn(name = "employees_id")
-        private  Employee employees;
+        private Employee employees;
         public Address(AddressResponseDTO data) {
                 this.road = data.road();
                 this.number = data.number();

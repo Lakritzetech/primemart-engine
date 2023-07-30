@@ -1,10 +1,7 @@
 package com.system.market.repository;
 
-import com.system.market.entities.Address;
-import com.system.market.entities.Employee;
+import com.system.market.model.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.Optional;
 
 public interface AddressRepository extends JpaRepository <Address,Long>{
 
